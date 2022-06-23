@@ -12,6 +12,7 @@
         <!--出した手-->
         <div>
             <!--自身の手-->
+            <img src="img\gu-.png" alt="グー" title="グー">
         </div>
         <div>
             <!--相手の手-->
@@ -25,6 +26,36 @@
     <!-- <img src="img\gu-.png" alt="グー" title="グー">
     <img src="img\pa-.png" alt="パー" title="パー">
     <img src="img\tyoki.png" alt="チョキ" title="チョキ"> -->
+    <script>
+ 
+        // ボタンクリック関数
+        function butotnClick1(){
+            console.log("gu-");
+        }
+
+        // document.getElementById()でHTMLの中でid属性がgu-の要素を取得し、変数buttonに代入する
+        let button1 = document.getElementById('gu-');
+        // buttonのonclickプロパティに上記で宣言しているボタンクリック関数を代入
+        button1.onclick = butotnClick1;
+
+        function butotnClick2(){
+            console.log("tyoki");
+        }
+
+        // document.getElementById()でHTMLの中でid属性がtyokiの要素を取得し、変数buttonに代入する
+        let button2 = document.getElementById('tyoki');
+        // buttonのonclickプロパティに上記で宣言しているボタンクリック関数を代入
+        button2.onclick = butotnClick2;
+
+        function butotnClick3(){
+            console.log("pa-");
+        }
+
+        // document.getElementById()でHTMLの中でid属性がpa-の要素を取得し、変数buttonに代入する
+        let button3 = document.getElementById('pa-');
+        // buttonのonclickプロパティに上記で宣言しているボタンクリック関数を代入
+        button3.onclick = butotnClick3;
+    </script>
 </body><!-- 画面に表示されるエリアの終了 -->
 </html>
 
