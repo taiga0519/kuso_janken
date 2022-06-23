@@ -1,0 +1,2 @@
+# kuso_janken
+ じゃんけんwebアプリ
