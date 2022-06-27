@@ -12,12 +12,12 @@
         <!--出した手-->
         <div>
             <!--自身の手-->
-            <img id="watasi" src="img\gu-.png" width="300px" height="300px">
+            <img id="watasi" src="https://2.bp.blogspot.com/-VhlO-Yfjy_E/Uab3z3RNJQI/AAAAAAAAUVg/fX8VnSVDlWs/s220/janken_gu.png" width="300px" height="300px">
 
         </div>
         <div>
             <!--相手の手-->
-            <img id="omae" src="img\gu-.png"  width="300px" height="300px">
+            <img id="omae" src="https://2.bp.blogspot.com/-VhlO-Yfjy_E/Uab3z3RNJQI/AAAAAAAAUVg/fX8VnSVDlWs/s220/janken_gu.png"  width="300px" height="300px">
         </div>
     </div>
     <div><!--出せる手-->
@@ -34,7 +34,7 @@
         function butotnClick1(){
             console.log("gu-");
             let img= document.getElementById('watasi');
-            img.src="img/gu-.png"
+            img.src="https://2.bp.blogspot.com/-VhlO-Yfjy_E/Uab3z3RNJQI/AAAAAAAAUVg/fX8VnSVDlWs/s220/janken_gu.png"
             janken(1);
         }
 
@@ -46,7 +46,7 @@
         function butotnClick2(){
             console.log("tyoki");
             let img= document.getElementById('watasi');
-            img.src="img/tyoki.png"
+            img.src="https://4.bp.blogspot.com/-__yEIXe5SxU/Uab3zO7BB2I/AAAAAAAAUVI/MYg6TVeiv-Y/s270/janken_choki.png"
             janken(2);
         }
 
@@ -58,7 +58,7 @@
         function butotnClick3(){
             console.log("pa-");
             let img= document.getElementById('watasi');
-            img.src="img/pa-.png"
+            img.src="https://3.bp.blogspot.com/-qZtyoue9xKs/Uab30IG0Q5I/AAAAAAAAUVk/qnH8a2OgrvI/s290/janken_pa.png"
             janken(3);
 
         }
@@ -77,13 +77,13 @@
             let omae= document.getElementById('omae')
             if(kisamakorosu==1){
                 console.log("omae gu-")
-                omae.src="img/gu-.png"
+                omae.src="https://2.bp.blogspot.com/-VhlO-Yfjy_E/Uab3z3RNJQI/AAAAAAAAUVg/fX8VnSVDlWs/s220/janken_gu.png"
             }else if(kisamakorosu==2){
                 console.log("omae tyoki")
-                omae.src="img/tyoki.png"
+                omae.src="https://4.bp.blogspot.com/-__yEIXe5SxU/Uab3zO7BB2I/AAAAAAAAUVI/MYg6TVeiv-Y/s270/janken_choki.png"
             }else if(kisamakorosu==3){
                 console.log("omae pa-")
-                omae.src="img/pa-.png"
+                omae.src="https://3.bp.blogspot.com/-qZtyoue9xKs/Uab30IG0Q5I/AAAAAAAAUVk/qnH8a2OgrvI/s290/janken_pa.png"
             }
             let syouhai=document.getElementById('syouhai');
             // syouhai.innerHTML("");
