@@ -12,10 +12,12 @@
         <!--出した手-->
         <div>
             <!--自身の手-->
-            <img src="img\gu-.png" alt="グー" title="グー">
+            <img id="watasi" src="img\gu-.png" alt="グー" title="グー">
+
         </div>
         <div>
             <!--相手の手-->
+            <img id="omae" src="img\gu-.png" alt="グー" title="グー">
         </div>
     </div>
     <div><!--出せる手-->
@@ -31,6 +33,7 @@
         // ボタンクリック関数
         function butotnClick1(){
             console.log("gu-");
+            janken(1);
         }
 
         // document.getElementById()でHTMLの中でid属性がgu-の要素を取得し、変数buttonに代入する
@@ -40,6 +43,7 @@
 
         function butotnClick2(){
             console.log("tyoki");
+            janken(2);
         }
 
         // document.getElementById()でHTMLの中でid属性がtyokiの要素を取得し、変数buttonに代入する
@@ -49,13 +53,37 @@
 
         function butotnClick3(){
             console.log("pa-");
+            janken(3);
+
         }
 
         // document.getElementById()でHTMLの中でid属性がpa-の要素を取得し、変数buttonに代入する
         let button3 = document.getElementById('pa-');
         // buttonのonclickプロパティに上記で宣言しているボタンクリック関数を代入
         button3.onclick = butotnClick3;
+
+        function janken(watasi){
+            //1:グー
+            //2:チョキ
+            //3:パー
+            kisamakorosu=Math.floor(Math.random(Date.now())*2+1);
+            console.log(kisamakorosu==1?"gu-":kisamakorosu==2?"tyoki":"pa-");
+
+            if(watasi==kisamakorosu){
+                console.log("わけ")
+            }else if(watasi==1&&kisamakorosu==3){
+                console.log("まけ")
+            }else if(watasi==3&&kisamakorosu==1){
+                console.log("かち")
+            }else if(watasi<kisamakorosu){
+                console.log("かち")
+            }else if(watasi>kisamakorosu){
+                console.log("まけ")
+            }
+        }
+        
     </script>
+
 </body><!-- 画面に表示されるエリアの終了 -->
 </html>
 
