@@ -5,19 +5,19 @@
 </head><!-- 裏設定エリアの終了 -->
  
 <body><!-- 画面に表示されるエリアの開始 -->
-    <div><!--勝ち負け-->
+    <div id="syouhai"><!--勝ち負け-->
         
     </div>
     <div>
         <!--出した手-->
         <div>
             <!--自身の手-->
-            <img id="watasi" src="img\gu-.png" alt="グー" title="グー">
+            <img id="watasi" src="img\gu-.png" width="300px" height="300px">
 
         </div>
         <div>
             <!--相手の手-->
-            <img id="omae" src="img\gu-.png" alt="グー" title="グー">
+            <img id="omae" src="img\gu-.png"  width="300px" height="300px">
         </div>
     </div>
     <div><!--出せる手-->
@@ -33,6 +33,8 @@
         // ボタンクリック関数
         function butotnClick1(){
             console.log("gu-");
+            let img= document.getElementById('watasi');
+            img.src="img/gu-.png"
             janken(1);
         }
 
@@ -43,6 +45,8 @@
 
         function butotnClick2(){
             console.log("tyoki");
+            let img= document.getElementById('watasi');
+            img.src="img/tyoki.png"
             janken(2);
         }
 
@@ -53,6 +57,8 @@
 
         function butotnClick3(){
             console.log("pa-");
+            let img= document.getElementById('watasi');
+            img.src="img/pa-.png"
             janken(3);
 
         }
@@ -68,20 +74,38 @@
             //3:パー
             kisamakorosu=Math.floor(Math.random(Date.now())*2+1);
             console.log(kisamakorosu==1?"gu-":kisamakorosu==2?"tyoki":"pa-");
-
+            let omae= document.getElementById('omae')
+            if(kisamakorosu==1){
+                console.log("omae gu-")
+                omae.src="img/gu-.png"
+            }else if(kisamakorosu==2){
+                console.log("omae tyoki")
+                omae.src="img/tyoki.png"
+            }else if(kisamakorosu==3){
+                console.log("omae pa-")
+                omae.src="img/pa-.png"
+            }
+            let syouhai=document.getElementById('syouhai');
+            // syouhai.innerHTML("");
             if(watasi==kisamakorosu){
                 console.log("わけ")
+                syouhai.innerHTML="わけ";
             }else if(watasi==1&&kisamakorosu==3){
                 console.log("まけ")
+                syouhai.innerHTML="まけ";
             }else if(watasi==3&&kisamakorosu==1){
                 console.log("かち")
+                syouhai.innerHTML="かち";
             }else if(watasi<kisamakorosu){
                 console.log("かち")
+                syouhai.innerHTML="かち";
             }else if(watasi>kisamakorosu){
                 console.log("まけ")
+                syouhai.innerHTML="ざこ";
             }
         }
         
+
     </script>
 
 </body><!-- 画面に表示されるエリアの終了 -->
